@@ -4,13 +4,12 @@ import math as mt
 from statistics import *
 from fibonnaci import *
 
-f =df
 
 def bracket_sign_change(a, b, k =2):
     if a > b:
         a, b = b, a 
         center, half_width = (b + a)/2, (b - a)/2
-        while f(a) * f(b) > 0:
+        while f_b(a) * f_b(b) > 0:
             half_width *=k
             a = center - half_width
             b = center - half_width
@@ -19,14 +18,14 @@ def bracket_sign_change(a, b, k =2):
 def bisection(a, b, epsilon = 0.01):
     if a > b :
         a, b =b, a
-    ya, yb = f(a), f(b)
+    ya, yb = f_b(a), f_b(b)
     if ya == 0:
         b = a
     if yb ==0:
         a = b
     while b - a > epsilon:
         x = (a + b)/2
-        y = f(x)
+        y = f_b(x)
         if y==0:
             a, b = x, x
         else:
@@ -38,8 +37,8 @@ def bisection(a, b, epsilon = 0.01):
 
 if __name__=='__main__':
     X = bisection(-2, 6)
-    print('el min: '+ str(round(mean(X)))+' f(min): '+str(round(f(mean(X)))))
-    grafica()
+    print('el min: '+ str(round(mean(X)))+' f(min): '+str(round(f_b(mean(X)))))
+    grafica_b()
 
 
 

@@ -29,8 +29,6 @@ def bracket_minimum(x, nMax, s=10**-2, k=1): #como indica la teoria del libro→
         return i,'con esta cantidad de iteraciones no se consigue'
     
 #se puede inferir que avanzara muy lentamente, 
-#el tamaño del paso es 0.01
-
 
 if __name__=='__main__':
     x0 = 0
@@ -40,3 +38,14 @@ if __name__=='__main__':
     if type(I) is not str:
         print('min:'+str(round(mean(I),5))+'\n'+'f(min):'+str(round(f(mean(I)),5)))
     grafica()
+
+"""
+    comenzamos por encerrar en un corchete un intervalo
+    que contiene un minimo , reducimos sucesivamente
+    el intervalo para converger a un minimo local
+    Se puede hacer un procedimiento simple 
+    para encontrar un corchete inicial 
+    comenzando en un punto, damos un paso en la direccion
+    positiva
+    la distancia que tomamos es un hiperpametro
+"""

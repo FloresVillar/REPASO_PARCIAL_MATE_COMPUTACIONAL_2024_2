@@ -43,7 +43,7 @@ def grafica(n=50):
 
 if __name__=='__main__':
     #print('valor de phi'+ str(PHI(100)))
-    n  = 5
+    n  = 10
     X = fibonacci_search(-2,6,n)
     print('min:' + str(round(mean(X),5))+' f(min):'+str(round(f(mean(X)),5)))
-    grafica()
+    #grafica()
